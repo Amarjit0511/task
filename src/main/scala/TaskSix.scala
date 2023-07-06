@@ -13,8 +13,12 @@ object TaskSix {
 
     // Creating a SparkSession
     val spark = SparkSession.builder()
-      .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
-      .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+      .config(
+        "spark.sql.extensions",
+        "io.delta.sql.DeltaSparkSessionExtension")
+      .config(
+        "spark.sql.catalog.spark_catalog",
+        "org.apache.spark.sql.delta.catalog.DeltaCatalog")
       .appName("TaskSix")
       .master("local[*]")
       .getOrCreate()
@@ -70,6 +74,9 @@ object TaskSix {
       .load()
       // This was added
       .selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+
+
+
 
    /* // Create a DataFrame representing the header row
     val headerRow = spark.createDataFrame(Seq(

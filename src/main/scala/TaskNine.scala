@@ -68,8 +68,28 @@ object TaskNine {
       //This was added
       .option("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer") // Specify the value deserializer
       .load()
-      .selectExpr("CAST(key AS STRING)", "value AS value_string")
-      .select(col("key"), col("value_string").cast(DecimalType(10, 2)).as("value_decimal"))
+      .selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+
+    val valueSchema = StructType(Seq(
+      StructField("LV ActivePower (kW)", DoubleType),
+      StructField("Wind Speed (m/s)", DoubleType),
+      StructField("Theoretical_Power_Curve (KWh)", DoubleType),
+      StructField("Wind Direction (°)", DoubleType)
+    ))
+
+    val afterConsumerDF = readDF.select(from_json(col("value"), valueSchema).as("data"))
+      .select("data.*")
+
+
+    afterConsumerDF.writeStream
+      .format("console")
+      .outputMode("append")
+      .start()
+      .awaitTermination()
+
+
+    /*.selectExpr("CAST(key AS STRING)", "value AS value_string")
+    .select(col("key"), col("value_string").cast(DecimalType(10, 2)).as("value_decimal"))*/
 
       //.select(from_json(col("value").cast(StringType), customSchema).as("value"))
       //.selectExpr("value.column1", "value.column2",. ..)
@@ -93,7 +113,7 @@ object TaskNine {
     val dataWithHeaderDF = headerRow.union(readDF)*/
 
     // Defining the schema for Delta format
-    val deltaSchema = StructType(Seq(
+    /*val deltaSchema = StructType(Seq(
       StructField("signal_date", DateType),
       StructField("signal_ts", TimestampType),
       StructField("signals", MapType(StringType, DoubleType)),
@@ -197,7 +217,7 @@ object TaskNine {
 
 
 
-    //spark.streams.awaitAnyTermination()
+    //spark.streams.awaitAnyTermination()*/
   }
 
 }

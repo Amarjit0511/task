@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e05b21-15dc-4d47-a66c-c021183240c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/plugins.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Task.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskEight.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskFive.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskFour.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskNine.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskSeven.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskSix.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskThree.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TaskTwo.scala" afterDir="false" />
+    <list default="true" id="79e05b21-15dc-4d47-a66c-c021183240c3" name="Changes" comment="task">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/TaskNine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/TaskNine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/TaskSix.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/TaskSix.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +47,20 @@
       <option name="presentableId" value="Default" />
       <updated>1688297511807</updated>
     </task>
+    <task id="LOCAL-00001" summary="task">
+      <option name="closed" value="true" />
+      <created>1688529460476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688529460476</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="task" />
+    <option name="LAST_COMMIT_MESSAGE" value="task" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
